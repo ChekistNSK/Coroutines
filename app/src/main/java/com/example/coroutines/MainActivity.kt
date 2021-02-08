@@ -15,12 +15,15 @@ class MainActivity : AppCompatActivity() {
 
     private val RESULT_1 = "Result #1"
 
-    var button = findViewById<Button>(R.id.button)
-    var textView = findViewById<TextView>(R.id.textView)
+    private lateinit var button: Button
+    private lateinit var textView: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        button = findViewById<Button>(R.id.button)
+        textView = findViewById<TextView>(R.id.textView)
 
         button.setOnClickListener {
             // IO, Main, Default
